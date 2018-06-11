@@ -4,7 +4,7 @@ This theme is based on the theme of the neat of https://freehtml5.co/demos/neat/
 And build for https://delokode.com
 
 Screenshot
-![alt text](https://raw.githubusercontent.com/andrepurnomo/ghost-theme-neat/master/assets/images/ss1.jpg)
+![This is screenshot](https://raw.githubusercontent.com/andrepurnomo/ghost-theme-neat/master/neat/assets/images/ss1.jpg)
 
 
 ### Installing
