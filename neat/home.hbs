@@ -1,0 +1,81 @@
+{{!< default}} 
+<aside id="fh5co-hero">
+    <div class="flexslider">
+        <ul class="slides">
+            {{#get "posts" filter="featured:true" as |featured|}}
+                {{#foreach featured}}
+                    <li style="background-image: url({{img_url feature_image}});">
+                        <div class="overlay-gradient"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-md-pull-3 slider-text">
+                                    <div class="slider-text-inner">
+                                        <h1>{{title}}</h1>
+                                        <h2>{{excerpt}}</h2>
+                                        <p>
+                                            <a href="{{url absolute='true'}}" class="btn btn-primary btn-learn">Read More</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{else}}
+                    <li style="background-image: url({{asset "images/img_bg_1.jpg"}});">
+                        <div class="overlay-gradient"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-md-pull-3 slider-text">
+                                    <div class="slider-text-inner">
+                                        <h1>No Featured Post</h1>
+                                        <h2>This is description of featured post</h2>
+                                        <p>
+                                            <a class="btn btn-primary btn-learn">Read More</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/foreach}}
+                {{else}}
+                    <li>No Featured Post</li>
+            {{/get}}
+        </ul>
+    </div>
+</aside>
+
+    <div id="fh5co-work" class="fh5co-light-grey">
+        <div class="row animate-box">
+            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+                <h2>Blog</h2>
+                <p>Don’t focus on having a great blog. Focus on producing a blog that’s great for your readers.</p>
+            </div>
+        </div>
+        <div class="row">
+            {{#get 'posts' filter="featured:false" limit="9" as |post|}}
+                {{#foreach post}}
+                    <div class="col-md-4 text-center animate-box">
+                        <a href="{{url absolute='true'}}" class="work" style="background-image: url({{img_url feature_image}});">
+                            <div class="desc">
+                                <h3>{{title}}</h3>
+                                <span>{{excerpt}}</span>
+                            </div>
+                        </a>
+                    </div>
+                {{/foreach}}
+            {{/get}}
+        </div>
+        {{pagination}}
+    </div>
+
+    
+    </div>
+    <!-- END container-wrap -->
+
+    <script>
+        var address1 = "Semarang, Jawa Tengah";
+        var address2 = "Indonesia";
+        var telephone = "+6287731588137";
+        var email = "andrepurnomo04@gmail.com";
+    </script>

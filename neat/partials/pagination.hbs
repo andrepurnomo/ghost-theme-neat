@@ -1,0 +1,11 @@
+<div class="text-center">
+    <span class="page-number">
+        Page {{page}} of {{pages}}</span>
+</div>
+<div class="row text-center">
+    {{#if prev}}
+    <a href="{{page_url prev}}" class="btn btn-primary btn-learn">Newer Post</a>
+    {{/if}} {{#if next}}
+    <a href="{{page_url next}}" class="btn btn-primary btn-learn">Older Post</a>
+    {{/if}}
+</div>

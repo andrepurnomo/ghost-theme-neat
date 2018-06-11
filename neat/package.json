@@ -1,0 +1,13 @@
+{
+    "name": "neat",
+    "description": "Neat Theme for Ghost, this theme from FreeHTML5.co",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": {
+        "name": "Delokode",
+        "email": "contact@delokode.com"
+    },
+    "config": {
+        "posts_per_page": 9
+    }
+}

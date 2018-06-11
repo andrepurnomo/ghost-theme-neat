@@ -1,0 +1,33 @@
+{{!< default}} {{#post}} <div class="container-wrap">
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.0';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <aside id="fh5co-hero">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url({{img_url feature_image}});">
+                    <div class="overlay-gradient"></div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="fh5co-work">
+        <div class="row">
+            <div class="col-md-12 fh5co-project-detail">
+                <h1>
+                    <b>{{title}}</b>
+                </h1>
+                <span class="fh5co-project-sub">{{date published_at format="MMMM DD, YYYY"}} by {{author}} | {{#primary_tag}}
+                    <a href="{{url}}">{{name}}</a>{{/primary_tag}}</span>
+                <p>{{content}}</p>
+            </div>
+        </div>
+                <div class="fb-comments" data-href="{{url absolute='true'}}" data-numposts="5" data-width="100%"></div>
+    </div>
+    </div>
+    {{/post}}

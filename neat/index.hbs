@@ -1,0 +1,40 @@
+{{!< default}}
+<div id="fh5co-work" class="fh5co-light-grey">
+    <div class="row animate-box">
+        <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+            {{#is "tag"}}
+                {{#tag}}
+                    <h2>{{name}}</h2>
+                    <p>{{description}}</p>
+                {{/tag}}
+            {{/is}}
+            {{#is "author"}}
+                {{#author}}
+                    <h2>{{name}}</h2>
+                    <p>{{bio}}</p>
+                {{/author}}
+            {{/is}}
+            {{#is "index"}}
+                <h2>Blog</h2>
+                <p>Don’t focus on having a great blog. Focus on producing a blog that’s great for your readers.</p>
+            {{/is}}
+        </div>
+    </div>
+    <div class="row">
+        {{#foreach posts}}
+        <div class="col-md-4 text-center animate-box">
+            <a href="{{url absolute='true'}}" class="work" style="background-image: url({{img_url feature_image}});">
+                <div class="desc">
+                    <h3>{{title}}</h3>
+                    <span>{{excerpt}}</span>
+                </div>
+            </a>
+        </div>
+        {{/foreach}}
+    </div>
+    {{pagination}}
+</div>
+
+
+</div>
+<!-- END container-wrap -->
